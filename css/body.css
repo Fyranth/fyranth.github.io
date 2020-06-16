@@ -189,6 +189,9 @@ p.footer {
     height: auto;
     border-radius: 10px;
 }
+.album>nav>img:hover {
+    cursor: pointer;
+}
 
 /*slider*/
 div.slider_back {

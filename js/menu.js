@@ -1,5 +1,5 @@
 //блок обработки меню
-function menu() {
+function Menu() {
     this.date_create = new Date();
     this.menu_data = [];
     this.created = false;
@@ -108,10 +108,13 @@ function menu() {
             if(data.link!='./index.html'){ 
                 obj['target'] = '_blank';
             }
+            obj['link-type'] = 'external';
         }else if(data.data_id!=''){
-            obj['href'] ='?data-id='+data.data_id;   
+            obj['href'] ='?data-id='+data.data_id;
+            obj['link-type'] = 'internal';   
         }
-        let a = $('<a>', obj).text(data.title).appendTo(nav);
+        let a = $('<a>', obj).text(data.title).addClass('menu-link').appendTo(nav);
+        //.on('click', createContent);
         if(data.children.length>0) {
             let nav_child_box = $('<nav>').addClass('link-menu-child').appendTo(nav);
             data.children.forEach((item)=>{$(createLinkNav(item)).appendTo(nav_child_box)});

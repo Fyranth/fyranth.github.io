@@ -1,4 +1,4 @@
-function content() {
+function Content() {
     this.data = '';
 
     this.getData = function(type) {
@@ -119,7 +119,7 @@ function openslider (e) {
     //Включаем показ тумана войны
     var slider_parent = $('#slider').parent().css('display', 'flex');
     //очистим слайдер
-    $(slider).remove('.slider_img_box');
+    $('.slider_img_box').remove();
     //загружаем в него картинки
     album_data.images.forEach(item => {
         let newDiv = $('<div>').addClass('slider_img_box').css('display', 'flex').attr({act: true, img_id: item})

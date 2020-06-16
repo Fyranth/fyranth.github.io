@@ -1,4 +1,4 @@
-function header() { 
+function Header() { 
     this.date_create = new Date();
     this.header_data = [];
     this.curr_slide = 1;

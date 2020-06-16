@@ -1,6 +1,6 @@
-var site_header = new header();
-var site_menu = new menu();
-var site_content = new content();
+var site_header = new Header();
+var site_menu = new Menu();
+var site_content = new Content();
 var el_header, el_menu, el_container_body, el_cont_left, el_cont_right, arr_menu_child;
 var resize_timer;
 
@@ -68,3 +68,17 @@ function changeStyles() {
         $(arr_menu_child).removeClass('menu_right').addClass('menu_down');
     }
 }
+
+/*function createContent(e){
+    if(!$(e.target).hasClass('menu-link')){return;}
+    else {
+        if($(e.target).attr('link-type')!='internal') {
+            return;
+        } 
+    }
+    e.preventDefault();
+    window.location.search = $(e.target).attr('href'); 
+    let data_type = getLinkParametr('data-id');
+    let id = getLinkParametr('element-id');
+    site_content.createContent(data_type, id);  
+}*/
