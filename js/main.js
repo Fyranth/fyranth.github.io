@@ -69,7 +69,7 @@ function changeStyles() {
     }
 }
 
-/*function createContent(e){
+function createContent(e){
     if(!$(e.target).hasClass('menu-link')){return;}
     else {
         if($(e.target).attr('link-type')!='internal') {
@@ -77,8 +77,10 @@ function changeStyles() {
         } 
     }
     e.preventDefault();
-    window.location.search = $(e.target).attr('href'); 
+   
+    window.history.pushState('','','./index.html'+$(e.target).attr('href')); 
     let data_type = getLinkParametr('data-id');
     let id = getLinkParametr('element-id');
     site_content.createContent(data_type, id);  
-}*/
+}
+

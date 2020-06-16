@@ -113,7 +113,7 @@ function Menu() {
             obj['href'] ='?data-id='+data.data_id;
             obj['link-type'] = 'internal';   
         }
-        let a = $('<a>', obj).text(data.title).addClass('menu-link').appendTo(nav);
+        let a = $('<a>', obj).text(data.title).addClass('menu-link').appendTo(nav).on('click', createContent);
         //.on('click', createContent);
         if(data.children.length>0) {
             let nav_child_box = $('<nav>').addClass('link-menu-child').appendTo(nav);
